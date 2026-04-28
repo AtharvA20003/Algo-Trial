@@ -20,23 +20,40 @@ strategies = [
 
 def get_data(symbol="BTCUSDT", interval="15m", limit=500):
     url = "https://api.binance.com/api/v3/klines"
+    
     params = {
         "symbol": symbol,
         "interval": interval,
-        "limit": limit 
+        "limit": limit
     }
-    response = requests.get(url, params=params)
-    data = response.json()
 
-    df = pd.DataFrame(data, columns = [
-        "time","open","high", "low","close","volume",
-        "close_time","qav","trades","tbbav","tbqav","ignore"
-    ])
-    df["close"] = df["close"].astype(float)
-    df["high"] = df["high"].astype(float)
-    df["low"] = df["low"].astype(float)
+    try:
+        response = requests.get(url, params=params, timeout=10)
+        data = response.json()
 
-    return df
+        # 🔴 Check if error response
+        if not isinstance(data, list):
+            print(f"API ERROR for {symbol}: {data}")
+            return pd.DataFrame()
+
+        if len(data) == 0:
+            print(f"EMPTY DATA for {symbol}")
+            return pd.DataFrame()
+
+        df = pd.DataFrame(data, columns=[
+            "time","open","high","low","close","volume",
+            "close_time","qav","trades","tbbav","tbqav","ignore"
+        ])
+
+        df["close"] = df["close"].astype(float)
+        df["high"] = df["high"].astype(float)
+        df["low"] = df["low"].astype(float)
+
+        return df
+
+    except Exception as e:
+        print(f"REQUEST FAILED: {e}")
+        return pd.DataFrame()
 
 def generate_signal(df):
     signal = "HOLD"
@@ -114,6 +131,12 @@ def run_bot():
     for config in strategies:
         df = get_data(symbol=config["symbol"], interval=config["interval"], limit=100)
         signal = ''
+
+        if df.empty or len(df) < 20:
+            print(f"Skipping {config['symbol']} {config['interval']} (no data)")
+            logger.warning(f"Skipping {config['symbol']} {config['interval']} (no data)")
+            continue
+        
         if config["rsi"] == True:
             signal = generate_signal_with_RSI(df)
         else:
