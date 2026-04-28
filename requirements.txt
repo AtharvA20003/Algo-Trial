@@ -1,2 +1,2 @@
-python-binance
+requests
 pandas
