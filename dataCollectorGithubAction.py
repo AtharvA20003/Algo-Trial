@@ -2,10 +2,10 @@ from binance.client import Client
 import pandas as pd
 import os
 
-API_KEY = os.environ.get("API_KEY")
-API_SECRET = os.environ.get("API_SECRET")
+# API_KEY = os.environ.get("API_KEY")
+# API_SECRET = os.environ.get("API_SECRET")
 
-client = Client(API_KEY, API_SECRET)
+client = Client()
 
 import logging
 filename = "paper_trading_logs.txt"
