@@ -3,6 +3,8 @@ import os
 import logging
 import requests
 
+if not os.path.exists("paper_trading_log.txt"):
+    open("paper_trading_log.txt", "w").close()
 
 filename = "paper_trading_logs.txt"
 logging.basicConfig(filename=filename,
@@ -19,7 +21,7 @@ strategies = [
 ]
 
 def get_data(symbol="BTCUSDT", interval="15m", limit=500):
-    url = "https://api.binance.com/api/v3/klines"
+    url = "https://data-api.binance.vision/api/v3/klines"
     
     params = {
         "symbol": symbol,
