@@ -6,12 +6,17 @@ import requests
 if not os.path.exists("paper_trading_log.txt"):
     open("paper_trading_log.txt", "w").close()
 
-filename = "paper_trading_logs.txt"
-logging.basicConfig(filename=filename,
-                    format='%(asctime)s %(levelname)s: %(message)s',
-                    filemode='a')
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
+
+if logger.hasHandlers():
+    logger.handlers.clear()
+
+file_handler = logging.FileHandler("paper_trading_log.txt")
+formatter = logging.Formatter('%(asctime)s %(levelname)s: %(message)s')
+file_handler.setFormatter(formatter)
+
+logger.addHandler(file_handler)
 
 strategies = [
     {"symbol": "BTCUSDT", "interval": "15m", "rsi": False},
