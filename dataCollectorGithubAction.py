@@ -1,13 +1,9 @@
-from binance.client import Client
 import pandas as pd
 import os
-
-# API_KEY = os.environ.get("API_KEY")
-# API_SECRET = os.environ.get("API_SECRET")
-
-client = Client()
-
 import logging
+import requests
+
+
 filename = "paper_trading_logs.txt"
 logging.basicConfig(filename=filename,
                     format='%(asctime)s %(levelname)s: %(message)s',
@@ -22,9 +18,17 @@ strategies = [
     {"symbol": "ETHUSDT", "interval": "1h", "rsi": False},
 ]
 
-def get_data(symbol="XRPUSDT", interval="15m", limit=100):
-    klines = client.get_klines(symbol = symbol, interval = interval, limit = limit)
-    df = pd.DataFrame(klines, columns = [
+def get_data(symbol="BTCUSDT", interval="15m", limit=500):
+    url = "https://api.binance.com/api/v3/klines"
+    params = {
+        "symbol": symbol,
+        "interval": interval,
+        "limit": limit 
+    }
+    response = requests.get(url, params=params)
+    data = response.json()
+
+    df = pd.DataFrame(data, columns = [
         "time","open","high", "low","close","volume",
         "close_time","qav","trades","tbbav","tbqav","ignore"
     ])
