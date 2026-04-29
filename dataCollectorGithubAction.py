@@ -2,6 +2,7 @@ import pandas as pd
 import os
 import logging
 import requests
+import time
 
 if not os.path.exists("paper_trading_log.txt"):
     open("paper_trading_log.txt", "w").close()
@@ -155,4 +156,6 @@ def run_bot():
         logger.info(f"${config['symbol']} | ${config['interval']} | ${signal} | Price : ${current_price}")
 
 if __name__ == "__main__":
-    run_bot()
+    for _ in range(2):
+        run_bot()
+        time.sleep(900)

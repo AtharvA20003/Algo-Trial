@@ -1,8 +1,12 @@
 name: Paper Trading Bot
 
+concurrency:
+  group: trading-bot
+  cancel-in-progress: true
+
 on:
   schedule:
-    - cron: "*/15 * * * *"   # every 15 minutes
+    - cron: "*/10 * * * *"   # every 10 minutes
   workflow_dispatch:         # manual run bhi possible
 
 jobs:
