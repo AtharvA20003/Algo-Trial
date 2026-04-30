@@ -35,7 +35,7 @@ jobs:
         run: |
           git config --global user.name "bot"
           git config --global user.email "bot@github.com"
-          touch paper_trading_log.txt
-          git add paper_trading_log.txt
+          touch paper_trading_logC.txt
+          git add paper_trading_logC.txt paper_trading_state.json
           git commit -m "update logs" || echo "no changes"
           git push
