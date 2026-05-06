@@ -42,17 +42,17 @@
     "start_balance": 50.0
   },
   "ETHUSDT_1h_norsi": {
-    "balance": 49.67334717167513,
-    "position": "SHORT",
-    "entry_price": 2349.7,
-    "trailing_stop": 2356.725,
+    "balance": 49.531712280222216,
+    "position": null,
+    "entry_price": 0.0,
+    "trailing_stop": null,
     "trades": 5,
     "wins": 1,
-    "losses": 3,
+    "losses": 4,
     "max_profit_long": 0.2987347197620818,
     "max_loss_long": -0.250870569675328,
-    "max_profit_short": null,
-    "max_loss_short": null,
+    "max_profit_short": -0.14163489145291328,
+    "max_loss_short": -0.14163489145291328,
     "start_balance": 50.0
   }
 }
