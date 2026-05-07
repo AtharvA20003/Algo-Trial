@@ -14,16 +14,16 @@
     "start_balance": 50.0
   },
   "BTCUSDT_1h_rsi": {
-    "balance": 49.083435352877224,
-    "position": "SHORT",
-    "entry_price": 80171.38,
-    "trailing_stop": 80200.0854,
+    "balance": 49.02628532571589,
+    "position": null,
+    "entry_price": 0.0,
+    "trailing_stop": null,
     "trades": 4,
     "wins": 0,
-    "losses": 3,
+    "losses": 4,
     "max_profit_long": -0.2212959920965908,
     "max_loss_long": -0.5015627139255183,
-    "max_profit_short": -0.19370594110066408,
+    "max_profit_short": -0.05715002716133746,
     "max_loss_short": -0.19370594110066408,
     "start_balance": 50.0
   },
