@@ -1,10 +1,10 @@
 {
   "BTCUSDT_15m_norsi": {
     "balance": 49.03713819406628,
-    "position": null,
-    "entry_price": 0.0,
-    "trailing_stop": null,
-    "trades": 12,
+    "position": "LONG",
+    "entry_price": 79596.69,
+    "trailing_stop": 79198.70655,
+    "trades": 13,
     "wins": 5,
     "losses": 7,
     "max_profit_long": 0.3245433614735268,
