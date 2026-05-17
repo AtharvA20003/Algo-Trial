@@ -6,8 +6,8 @@ import time
 from datetime import datetime
 
 # ===== CONFIG =====
-STATE_FILE = "state.json"
-LOG_FILE = "trade_log.txt"
+STATE_FILE = "paper_trading_state.json"
+LOG_FILE = "paper_trading_logC.txt"
 
 START_BALANCE = 50
 
