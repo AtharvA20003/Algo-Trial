@@ -56,17 +56,17 @@
     "start_balance": 50.0
   },
   "BTCUSDT_15m_False": {
-    "balance": 52.62921599687151,
-    "position": "SHORT",
+    "balance": 52.16766756741331,
+    "position": null,
     "entry_price": 63337.74,
     "trailing_stop": 62842.649999999994,
     "trades": 16,
     "wins": 5,
-    "losses": 10,
+    "losses": 11,
     "max_profit_long": 0.4835881654416218,
     "max_loss_long": -0.209760953190324,
     "max_profit_short": 3.695873854113662,
-    "max_loss_short": -0.39166277104052794
+    "max_loss_short": -0.4615484294581993
   },
   "BTCUSDT_1h_True": {
     "balance": 50.54025573483708,
