@@ -69,28 +69,28 @@
     "max_loss_short": -0.4615484294581993
   },
   "BTCUSDT_1h_True": {
-    "balance": 50.54025573483708,
-    "position": "LONG",
+    "balance": 51.306124156142594,
+    "position": null,
     "entry_price": 61778.41,
     "trailing_stop": 63015.34995,
     "trades": 6,
-    "wins": 1,
+    "wins": 2,
     "losses": 4,
-    "max_profit_long": null,
-    "max_loss_long": null,
+    "max_profit_long": 0.7658684213055111,
+    "max_loss_long": 0.7658684213055111,
     "max_profit_short": 1.6015235702890094,
     "max_loss_short": -0.42228599845261405
   },
   "ETHUSDT_1h_False": {
-    "balance": 57.08460961049166,
-    "position": "LONG",
+    "balance": 57.70773984883761,
+    "position": null,
     "entry_price": 1634.53,
     "trailing_stop": 1682.05745,
     "trades": 13,
-    "wins": 8,
+    "wins": 9,
     "losses": 4,
     "max_profit_long": 0.9204772121528395,
-    "max_loss_long": 0.716775684305861,
+    "max_loss_long": 0.6231302383459532,
     "max_profit_short": 2.0648680115519826,
     "max_loss_short": -0.4487538991384327
   }
