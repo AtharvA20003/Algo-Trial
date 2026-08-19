@@ -69,14 +69,14 @@
     "max_loss_short": -0.7698508647505924
   },
   "BTCUSDT_1h_True": {
-    "balance": 54.40640343320698,
-    "position": "LONG",
+    "balance": 57.14276221192733,
+    "position": null,
     "entry_price": 64882.15,
     "trailing_stop": 68211.23,
     "trades": 35,
-    "wins": 15,
+    "wins": 16,
     "losses": 19,
-    "max_profit_long": 1.7387138720579483,
+    "max_profit_long": 2.736358778720346,
     "max_loss_long": -0.4617048181647312,
     "max_profit_short": 1.6015235702890094,
     "max_loss_short": -0.5292339347788595
@@ -85,7 +85,7 @@
     "balance": 69.70345666887742,
     "position": "LONG",
     "entry_price": 1916.01,
-    "trailing_stop": 2079.1022500000004,
+    "trailing_stop": 2080.5649,
     "trades": 61,
     "wins": 30,
     "losses": 30,
