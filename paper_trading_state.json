@@ -82,12 +82,12 @@
     "max_loss_short": -0.5292339347788595
   },
   "ETHUSDT_1h_False": {
-    "balance": 85.39478110582138,
-    "position": "LONG",
+    "balance": 86.29336165523245,
+    "position": null,
     "entry_price": 2471.15,
     "trailing_stop": 2500.9325,
     "trades": 77,
-    "wins": 42,
+    "wins": 43,
     "losses": 34,
     "max_profit_long": 12.09425756768595,
     "max_loss_long": -2.7171780583804024,
