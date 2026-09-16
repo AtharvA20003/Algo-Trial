@@ -56,13 +56,13 @@
     "start_balance": 50.0
   },
   "BTCUSDT_15m_False": {
-    "balance": 60.03722542158113,
-    "position": "SHORT",
+    "balance": 59.58905774234867,
+    "position": null,
     "entry_price": 75715.36,
     "trailing_stop": 75837.95324999999,
     "trades": 123,
     "wins": 45,
-    "losses": 77,
+    "losses": 78,
     "max_profit_long": 2.5568904336954814,
     "max_loss_long": -0.8822024843298436,
     "max_profit_short": 3.695873854113662,
@@ -82,13 +82,13 @@
     "max_loss_short": -0.5292339347788595
   },
   "ETHUSDT_1h_False": {
-    "balance": 87.05150054456331,
-    "position": "SHORT",
+    "balance": 86.37957162689244,
+    "position": null,
     "entry_price": 2392.05,
     "trailing_stop": 2404.01025,
     "trades": 81,
     "wins": 45,
-    "losses": 35,
+    "losses": 36,
     "max_profit_long": 12.09425756768595,
     "max_loss_long": -2.7171780583804024,
     "max_profit_short": 3.4941694923908377,
