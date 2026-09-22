@@ -59,7 +59,7 @@
     "balance": 60.05492713255764,
     "position": "SHORT",
     "entry_price": 85890.71,
-    "trailing_stop": 86215.14104999999,
+    "trailing_stop": 85775.75504999999,
     "trades": 127,
     "wins": 47,
     "losses": 79,
